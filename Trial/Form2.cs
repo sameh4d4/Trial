@@ -16,5 +16,28 @@ namespace Trial
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            buttonh1.Visible = false;
+            buttonh2.Visible = false;
+            buttonh3.Visible = false;
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            if (buttonh1.Visible == false)
+            {
+                buttonh1.Visible = true;
+                buttonh2.Visible = true;
+                buttonh3.Visible = true;
+            }
+            else
+            {
+                buttonh1.Visible = false;
+                buttonh2.Visible = false;
+                buttonh3.Visible = false;
+            }
+        }
     }
 }
