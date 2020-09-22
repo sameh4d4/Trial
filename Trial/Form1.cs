@@ -26,7 +26,7 @@ namespace Trial
             {
                 //asdasdasdas
                 listBox1.Items.Add(h + "");
-                listBox1.Items.Add("");
+                listBox1.Items.Add("lsasasa");
                 if (h % 20 == 0)
                 {
                     break;
