@@ -24,7 +24,9 @@ namespace Trial
             double h = 1;
             while (h < 100)
             {
+                //asdasdasdas
                 listBox1.Items.Add(h + "");
+                listBox1.Items.Add("");
                 if (h % 20 == 0)
                 {
                     break;
