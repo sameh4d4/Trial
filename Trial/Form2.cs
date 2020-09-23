@@ -20,6 +20,7 @@ namespace Trial
         private void Form2_Load(object sender, EventArgs e)
         {
             //comment
+            //apa
             buttonh1.Visible = false;
             buttonh2.Visible = false;
             buttonh3.Visible = false;
