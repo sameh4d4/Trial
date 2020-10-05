@@ -88,8 +88,14 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHapusProduk.resx">
+      <DependentUpon>FormHapusProduk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTambahProduk.resx">
       <DependentUpon>FormTambahProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUbahProduk.resx">
+      <DependentUpon>FormUbahProduk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
