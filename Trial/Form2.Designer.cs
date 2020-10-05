@@ -36,12 +36,18 @@
             this.button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonMP3 = new System.Windows.Forms.Button();
+            this.buttonMP2 = new System.Windows.Forms.Button();
+            this.buttonMP1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.buttonMP3);
+            this.panel1.Controls.Add(this.buttonMP2);
+            this.panel1.Controls.Add(this.buttonMP1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonh3);
             this.panel1.Controls.Add(this.buttonh2);
@@ -69,6 +75,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Master Produk";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonh3
             // 
@@ -155,6 +162,55 @@
             this.panel3.Size = new System.Drawing.Size(450, 285);
             this.panel3.TabIndex = 2;
             // 
+            // buttonMP3
+            // 
+            this.buttonMP3.BackColor = System.Drawing.Color.Gray;
+            this.buttonMP3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonMP3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonMP3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonMP3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMP3.ForeColor = System.Drawing.Color.Snow;
+            this.buttonMP3.Location = new System.Drawing.Point(0, 196);
+            this.buttonMP3.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonMP3.Name = "buttonMP3";
+            this.buttonMP3.Size = new System.Drawing.Size(150, 28);
+            this.buttonMP3.TabIndex = 7;
+            this.buttonMP3.Text = "Hapus Produk";
+            this.buttonMP3.UseVisualStyleBackColor = false;
+            // 
+            // buttonMP2
+            // 
+            this.buttonMP2.BackColor = System.Drawing.Color.Gray;
+            this.buttonMP2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonMP2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonMP2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonMP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMP2.ForeColor = System.Drawing.Color.Snow;
+            this.buttonMP2.Location = new System.Drawing.Point(0, 168);
+            this.buttonMP2.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonMP2.Name = "buttonMP2";
+            this.buttonMP2.Size = new System.Drawing.Size(150, 28);
+            this.buttonMP2.TabIndex = 6;
+            this.buttonMP2.Text = "Ubah Produk";
+            this.buttonMP2.UseVisualStyleBackColor = false;
+            // 
+            // buttonMP1
+            // 
+            this.buttonMP1.BackColor = System.Drawing.Color.Gray;
+            this.buttonMP1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonMP1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonMP1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonMP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMP1.ForeColor = System.Drawing.Color.Snow;
+            this.buttonMP1.Location = new System.Drawing.Point(0, 140);
+            this.buttonMP1.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonMP1.Name = "buttonMP1";
+            this.buttonMP1.Size = new System.Drawing.Size(150, 28);
+            this.buttonMP1.TabIndex = 5;
+            this.buttonMP1.Text = "Tambah Produk";
+            this.buttonMP1.UseVisualStyleBackColor = false;
+            this.buttonMP1.Click += new System.EventHandler(this.buttonMP1_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,5 +238,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonMP3;
+        private System.Windows.Forms.Button buttonMP2;
+        private System.Windows.Forms.Button buttonMP1;
     }
 }

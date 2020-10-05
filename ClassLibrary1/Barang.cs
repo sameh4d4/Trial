@@ -34,5 +34,13 @@ namespace ClassLibrary1
         public int Stok { get => stok; set => stok = value; }
         public double Harga { get => harga; set => harga = value; }
         public string Deskripsi { get => deskripsi; set => deskripsi = value; }
+
+        public static void TambahData(Barang b)
+        {
+            string sql = "insert into barang(idBarang,idPenjual,jenisBarang,namaBarang,stok,harga,deskripsi) values('" + b.idBarang + "','" + b.idPenjual + "','" + b.jenisBarang.Replace("'", "\\'") + "','" + b.namaBarang.Replace("'", "\\'") + "','" + b.stok + "','" + b.harga + "','" + b.deskripsi + "')";
+
+            Koneksi.JalankanPerintahDML(sql);
+
+        }
     }
 }

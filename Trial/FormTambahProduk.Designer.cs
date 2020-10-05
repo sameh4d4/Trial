@@ -42,7 +42,7 @@
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxIDPenjual = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxJenisBarang = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.richTextBoxDeskripsi = new System.Windows.Forms.RichTextBox();
@@ -64,7 +64,7 @@
             // 
             this.panel1.Controls.Add(this.richTextBoxDeskripsi);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxJenisBarang);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBoxIDPenjual);
             this.panel1.Controls.Add(this.label6);
@@ -153,6 +153,7 @@
             this.buttonSimpan.TabIndex = 2;
             this.buttonSimpan.Text = "SIMPAN";
             this.buttonSimpan.UseVisualStyleBackColor = true;
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // buttonKeluar
             // 
@@ -179,12 +180,12 @@
             this.textBoxIDPenjual.Size = new System.Drawing.Size(185, 20);
             this.textBoxIDPenjual.TabIndex = 9;
             // 
-            // textBox1
+            // textBoxJenisBarang
             // 
-            this.textBox1.Location = new System.Drawing.Point(94, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 20);
-            this.textBox1.TabIndex = 11;
+            this.textBoxJenisBarang.Location = new System.Drawing.Point(94, 75);
+            this.textBoxJenisBarang.Name = "textBoxJenisBarang";
+            this.textBoxJenisBarang.Size = new System.Drawing.Size(185, 20);
+            this.textBoxJenisBarang.TabIndex = 11;
             // 
             // label7
             // 
@@ -247,7 +248,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox richTextBoxDeskripsi;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxJenisBarang;
         private System.Windows.Forms.Label label7;
     }
 }
