@@ -177,7 +177,6 @@
             this.buttonMP3.TabIndex = 7;
             this.buttonMP3.Text = "Hapus Produk";
             this.buttonMP3.UseVisualStyleBackColor = false;
-            this.buttonMP3.Click += new System.EventHandler(this.buttonMP3_Click);
             // 
             // buttonMP2
             // 
@@ -194,7 +193,6 @@
             this.buttonMP2.TabIndex = 6;
             this.buttonMP2.Text = "Ubah Produk";
             this.buttonMP2.UseVisualStyleBackColor = false;
-            this.buttonMP2.Click += new System.EventHandler(this.buttonMP2_Click);
             // 
             // buttonMP1
             // 

@@ -70,19 +70,5 @@ namespace Trial
             frm.Owner = this;
             frm.Show();
         }
-
-        private void buttonMP2_Click(object sender, EventArgs e)
-        {
-            FormUbahProduk frm = new FormUbahProduk();
-            frm.Owner = this;
-            frm.Show();
-        }
-
-        private void buttonMP3_Click(object sender, EventArgs e)
-        {
-            FormHapusProduk frm = new FormHapusProduk();
-            frm.Owner = this;
-            frm.Show();
-        }
     }
 }
