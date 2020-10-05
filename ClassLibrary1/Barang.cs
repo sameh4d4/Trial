@@ -42,5 +42,19 @@ namespace ClassLibrary1
             Koneksi.JalankanPerintahDML(sql);
 
         }
+
+        public static void UbahData(Barang b)
+        {
+            string sql = "update barang set idPenjual='" + b.idPenjual + "',jenisBarang='" + b.jenisBarang.Replace("'", "\\'") + "',namaBarang='" + b.namaBarang.Replace("'", "\\'") + "',stok='" + b.stok + "',harga='" + b.harga + "',deskripsi='" + b.deskripsi + "'where idBarang='" + b.idBarang + "'";
+
+            Koneksi.JalankanPerintahDML(sql);
+
+        }
+
+        public static void HapusData(Barang b)
+        {
+            string sql = "delete from barang where idBarang='" + b.idBarang + "'";
+            Koneksi.JalankanPerintahDML(sql);
+        }
     }
 }
