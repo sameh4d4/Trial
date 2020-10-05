@@ -59,6 +59,24 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHapusProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHapusProduk.Designer.cs">
+      <DependentUpon>FormHapusProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahProduk.Designer.cs">
+      <DependentUpon>FormTambahProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUbahProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUbahProduk.Designer.cs">
+      <DependentUpon>FormUbahProduk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -66,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahProduk.resx">
+      <DependentUpon>FormTambahProduk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
