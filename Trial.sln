@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trial", "Trial\Trial.csproj
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Install", "Install\Install.vdproj", "{C11569E9-1D20-4FC5-8D08-7C75E254AABB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{5ADF60C4-8607-4402-91D2-AFF8D0C3B73B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{41A398D9-5C4C-4244-8E57-302EE3FF05AD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C11569E9-1D20-4FC5-8D08-7C75E254AABB}.Debug|Any CPU.ActiveCfg = Debug
 		{C11569E9-1D20-4FC5-8D08-7C75E254AABB}.Release|Any CPU.ActiveCfg = Release
+		{5ADF60C4-8607-4402-91D2-AFF8D0C3B73B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ADF60C4-8607-4402-91D2-AFF8D0C3B73B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ADF60C4-8607-4402-91D2-AFF8D0C3B73B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ADF60C4-8607-4402-91D2-AFF8D0C3B73B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
