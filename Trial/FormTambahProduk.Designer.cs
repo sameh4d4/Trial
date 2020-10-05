@@ -34,12 +34,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxKode = new System.Windows.Forms.TextBox();
+            this.textBoxIDBarang = new System.Windows.Forms.TextBox();
             this.textBoxNama = new System.Windows.Forms.TextBox();
             this.textBoxHarga = new System.Windows.Forms.TextBox();
             this.textBoxStok = new System.Windows.Forms.TextBox();
             this.buttonSimpan = new System.Windows.Forms.Button();
             this.buttonKeluar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxIDPenjual = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.richTextBoxDeskripsi = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,17 +62,23 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.richTextBoxDeskripsi);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.textBoxIDPenjual);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBoxStok);
             this.panel1.Controls.Add(this.textBoxHarga);
             this.panel1.Controls.Add(this.textBoxNama);
-            this.panel1.Controls.Add(this.textBoxKode);
+            this.panel1.Controls.Add(this.textBoxIDBarang);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(12, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(345, 143);
+            this.panel1.Size = new System.Drawing.Size(345, 317);
             this.panel1.TabIndex = 1;
             // 
             // label2
@@ -74,14 +86,14 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(17, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Kode: ";
+            this.label2.Text = "ID Barang:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 42);
+            this.label3.Location = new System.Drawing.Point(17, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 1;
@@ -90,7 +102,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 68);
+            this.label4.Location = new System.Drawing.Point(17, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 2;
@@ -99,43 +111,43 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 93);
+            this.label5.Location = new System.Drawing.Point(17, 139);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "Stok:";
             // 
-            // textBoxKode
+            // textBoxIDBarang
             // 
-            this.textBoxKode.Location = new System.Drawing.Point(84, 12);
-            this.textBoxKode.Name = "textBoxKode";
-            this.textBoxKode.Size = new System.Drawing.Size(185, 20);
-            this.textBoxKode.TabIndex = 4;
+            this.textBoxIDBarang.Location = new System.Drawing.Point(94, 12);
+            this.textBoxIDBarang.Name = "textBoxIDBarang";
+            this.textBoxIDBarang.Size = new System.Drawing.Size(185, 20);
+            this.textBoxIDBarang.TabIndex = 4;
             // 
             // textBoxNama
             // 
-            this.textBoxNama.Location = new System.Drawing.Point(84, 35);
+            this.textBoxNama.Location = new System.Drawing.Point(94, 101);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(185, 20);
             this.textBoxNama.TabIndex = 5;
             // 
             // textBoxHarga
             // 
-            this.textBoxHarga.Location = new System.Drawing.Point(84, 61);
+            this.textBoxHarga.Location = new System.Drawing.Point(94, 162);
             this.textBoxHarga.Name = "textBoxHarga";
             this.textBoxHarga.Size = new System.Drawing.Size(185, 20);
             this.textBoxHarga.TabIndex = 6;
             // 
             // textBoxStok
             // 
-            this.textBoxStok.Location = new System.Drawing.Point(84, 87);
+            this.textBoxStok.Location = new System.Drawing.Point(94, 132);
             this.textBoxStok.Name = "textBoxStok";
             this.textBoxStok.Size = new System.Drawing.Size(185, 20);
             this.textBoxStok.TabIndex = 7;
             // 
             // buttonSimpan
             // 
-            this.buttonSimpan.Location = new System.Drawing.Point(282, 203);
+            this.buttonSimpan.Location = new System.Drawing.Point(282, 377);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(75, 36);
             this.buttonSimpan.TabIndex = 2;
@@ -144,18 +156,67 @@
             // 
             // buttonKeluar
             // 
-            this.buttonKeluar.Location = new System.Drawing.Point(167, 203);
+            this.buttonKeluar.Location = new System.Drawing.Point(167, 377);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(75, 36);
             this.buttonKeluar.TabIndex = 3;
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "ID Penjual:";
+            // 
+            // textBoxIDPenjual
+            // 
+            this.textBoxIDPenjual.Location = new System.Drawing.Point(94, 45);
+            this.textBoxIDPenjual.Name = "textBoxIDPenjual";
+            this.textBoxIDPenjual.Size = new System.Drawing.Size(185, 20);
+            this.textBoxIDPenjual.TabIndex = 9;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(94, 75);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(185, 20);
+            this.textBox1.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 78);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Jenis Barang:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(17, 210);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 13);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Deskripsi:";
+            // 
+            // richTextBoxDeskripsi
+            // 
+            this.richTextBoxDeskripsi.Location = new System.Drawing.Point(94, 188);
+            this.richTextBoxDeskripsi.Name = "richTextBoxDeskripsi";
+            this.richTextBoxDeskripsi.Size = new System.Drawing.Size(185, 74);
+            this.richTextBoxDeskripsi.TabIndex = 13;
+            this.richTextBoxDeskripsi.Text = "";
+            // 
             // FormTambahProduk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 266);
+            this.ClientSize = new System.Drawing.Size(381, 425);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.panel1);
@@ -173,7 +234,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxNama;
-        private System.Windows.Forms.TextBox textBoxKode;
+        private System.Windows.Forms.TextBox textBoxIDBarang;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -182,5 +243,11 @@
         private System.Windows.Forms.TextBox textBoxHarga;
         private System.Windows.Forms.Button buttonSimpan;
         private System.Windows.Forms.Button buttonKeluar;
+        private System.Windows.Forms.TextBox textBoxIDPenjual;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RichTextBox richTextBoxDeskripsi;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
     }
 }
