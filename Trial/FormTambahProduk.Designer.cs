@@ -212,6 +212,7 @@
             this.buttonKeluar.TabIndex = 3;
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = true;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // FormTambahProduk
             // 

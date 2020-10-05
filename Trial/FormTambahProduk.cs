@@ -32,5 +32,10 @@ namespace Trial
                 MessageBox.Show("Data barang gagal ditambahkan. Pesan Kesalahan: " + ec.Message, "kesalahan");
             }
         }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
