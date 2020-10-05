@@ -19,9 +19,17 @@ namespace Trial
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            //comment
+            //apa
+
+            //testing123 x 123
             buttonh1.Visible = false;
             buttonh2.Visible = false;
             buttonh3.Visible = false;
+
+            buttonMP1.Visible = false;
+            buttonMP2.Visible = false;
+            buttonMP3.Visible = false;
         }
 
         private void button_Click(object sender, EventArgs e)
@@ -40,9 +48,41 @@ namespace Trial
             }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            if (buttonMP1.Visible == false)
+            {
+                buttonMP1.Visible = true;
+                buttonMP2.Visible = true;
+                buttonMP3.Visible = true;
+            }
+            else
+            {
+                buttonMP1.Visible = false;
+                buttonMP2.Visible = false;
+                buttonMP3.Visible = false;
+            }
+        }
 
+        private void buttonMP1_Click(object sender, EventArgs e)
+        {
+            FormTambahProduk frm = new FormTambahProduk();
+            frm.Owner = this;
+            frm.Show();
+        }
+
+        private void buttonMP2_Click(object sender, EventArgs e)
+        {
+            FormUbahProduk frm = new FormUbahProduk();
+            frm.Owner = this;
+            frm.Show();
+        }
+
+        private void buttonMP3_Click(object sender, EventArgs e)
+        {
+            FormHapusProduk frm = new FormHapusProduk();
+            frm.Owner = this;
+            frm.Show();
         }
     }
 }
