@@ -83,6 +83,7 @@ namespace Trial
             FormHapusProduk frm = new FormHapusProduk();
             frm.Owner = this;
             frm.Show();
+            //tes
         }
     }
 }
