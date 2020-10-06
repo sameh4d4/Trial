@@ -27,9 +27,9 @@ namespace Trial
             buttonh2.Visible = false;
             buttonh3.Visible = false;
 
-            buttonMP1.Visible = false;
-            buttonMP2.Visible = false;
-            buttonMP3.Visible = false;
+            buttonMProduk.Visible = false;
+            buttonMPegawai.Visible = false;
+            buttonMNota.Visible = false;
         }
 
         private void button_Click(object sender, EventArgs e)
@@ -50,39 +50,44 @@ namespace Trial
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (buttonMP1.Visible == false)
+            if (buttonMProduk.Visible == false)
             {
-                buttonMP1.Visible = true;
-                buttonMP2.Visible = true;
-                buttonMP3.Visible = true;
+                buttonMProduk.Visible = true;
+                buttonMPegawai.Visible = true;
+                buttonMNota.Visible = true;
             }
             else
             {
-                buttonMP1.Visible = false;
-                buttonMP2.Visible = false;
-                buttonMP3.Visible = false;
+                buttonMProduk.Visible = false;
+                buttonMPegawai.Visible = false;
+                buttonMNota.Visible = false;
             }
         }
-
+        Form fo = null;
         private void buttonMP1_Click(object sender, EventArgs e)
         {
-            FormTambahProduk frm = new FormTambahProduk();
-            frm.Owner = this;
-            frm.Show();
+            fo = Application.OpenForms["FormDaftarBarang"];
+            if (fo == null)
+            {
+                FormDaftarProduk fdp = new FormDaftarProduk();
+                fdp.Owner = this;
+                fdp.Show();
+            }
+            else
+            {
+                fo.Show();
+                fo.BringToFront();
+            }
         }
 
         private void buttonMP2_Click(object sender, EventArgs e)
         {
-            FormUbahProduk frm = new FormUbahProduk();
-            frm.Owner = this;
-            frm.Show();
+            
         }
 
         private void buttonMP3_Click(object sender, EventArgs e)
         {
-            FormHapusProduk frm = new FormHapusProduk();
-            frm.Owner = this;
-            frm.Show();
+            
             //tes
         }
     }

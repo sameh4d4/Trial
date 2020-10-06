@@ -21,10 +21,12 @@ namespace Trial
         {
             try
             {
-                
-               Barang b = new Barang(int.Parse(textBoxIDBarang.Text), int.Parse(textBoxIDPenjual.Text), textBoxJenisBarang.Text, textBoxNama.Text,  int.Parse(textBoxStok.Text), int.Parse(textBoxHarga.Text), richTextBoxDeskripsi.Text);
-               Barang.TambahData(b);
-               MessageBox.Show("Data barang ditambahkan.", "informasi");
+                Barang b = new Barang(int.Parse(textBoxIDBarang.Text), int.Parse(textBoxIDPenjual.Text), textBoxJenisBarang.Text, textBoxNama.Text,  int.Parse(textBoxStok.Text), int.Parse(textBoxHarga.Text), richTextBoxDeskripsi.Text);
+                //Barang.TambahData(b);
+                FormDaftarProduk own = (FormDaftarProduk)this.Owner;
+                own.daftarBarang.Add(b);
+                own.UpdateDG(own.daftarBarang);
+                MessageBox.Show("Data barang ditambahkan.", "informasi");
 
             }
             catch (Exception ec)

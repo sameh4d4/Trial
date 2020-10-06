@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClassLibrary1">
+      <HintPath>..\ClassLibrary1\bin\Debug\ClassLibrary1.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\MySql.Data.dll</HintPath>
     </Reference>
@@ -62,6 +65,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDaftarProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarProduk.Designer.cs">
+      <DependentUpon>FormDaftarProduk.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHapusProduk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +89,12 @@
     <Compile Include="FormUbahProduk.Designer.cs">
       <DependentUpon>FormUbahProduk.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtama.Designer.cs">
+      <DependentUpon>FormUtama.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -87,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftarProduk.resx">
+      <DependentUpon>FormDaftarProduk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHapusProduk.resx">
       <DependentUpon>FormHapusProduk.cs</DependentUpon>
@@ -96,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUbahProduk.resx">
       <DependentUpon>FormUbahProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtama.resx">
+      <DependentUpon>FormUtama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,9 +142,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
+    <ProjectReference Include="..\ClassLibrary1\R-PostClass.csproj">
       <Project>{5adf60c4-8607-4402-91d2-aff8d0c3b73b}</Project>
-      <Name>ClassLibrary1</Name>
+      <Name>R-PostClass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
