@@ -9,14 +9,14 @@ namespace ClassLibrary1
     public class Barang
     {
         int idBarang;
-        int idPenjual;
+        string idPenjual;
         string jenisBarang;
         string namaBarang;
         int stok;
         double harga;
         string deskripsi;
 
-        public Barang(int idBr, int idPj, string jB, string nB, int st, double hrg, string des)
+        public Barang(int idBr, string idPj, string jB, string nB, int st, double hrg, string des)
         {
             idBarang = idBr;
             idPenjual = idPj;
@@ -28,7 +28,7 @@ namespace ClassLibrary1
         }
 
         public int IdBarang { get => idBarang; set => idBarang = value; }
-        public int IdPenjual { get => idPenjual; set => idPenjual = value; }
+        public string IdPenjual { get => idPenjual; set => idPenjual = value; }
         public string JenisBarang { get => jenisBarang; set => jenisBarang = value; }
         public string NamaBarang { get => namaBarang; set => namaBarang = value; }
         public int Stok { get => stok; set => stok = value; }
