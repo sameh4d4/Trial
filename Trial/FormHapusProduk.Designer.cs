@@ -172,9 +172,9 @@
             this.label6.Font = new System.Drawing.Font("Open Sans Semibold", 12F);
             this.label6.Location = new System.Drawing.Point(17, 46);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 22);
+            this.label6.Size = new System.Drawing.Size(70, 22);
             this.label6.TabIndex = 20;
-            this.label6.Text = "ID Penjual:";
+            this.label6.Text = "Penjual:";
             // 
             // textBoxStok
             // 

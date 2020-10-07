@@ -50,7 +50,7 @@ namespace Trial
             if (i.Count > 0)
             {
                 dataGridView1.Columns.Add("IdBarang", "ID Barang");
-                dataGridView1.Columns.Add("IdPenjual", "ID Penjual");
+                dataGridView1.Columns.Add("IdPenjual", "Penjual");
                 dataGridView1.Columns.Add("JenisBarang", "Jenis Barang");
                 dataGridView1.Columns.Add("NamaBarang", "Nama Barang");
                 dataGridView1.Columns.Add("Stok", "Stok");
