@@ -56,7 +56,7 @@
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(345, 33);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 3;
             this.label1.Text = "TAMBAH PRODUK";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -80,14 +80,14 @@
             this.panel1.Location = new System.Drawing.Point(12, 54);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(345, 317);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 0;
             // 
             // richTextBoxDeskripsi
             // 
             this.richTextBoxDeskripsi.Location = new System.Drawing.Point(125, 198);
             this.richTextBoxDeskripsi.Name = "richTextBoxDeskripsi";
             this.richTextBoxDeskripsi.Size = new System.Drawing.Size(185, 74);
-            this.richTextBoxDeskripsi.TabIndex = 13;
+            this.richTextBoxDeskripsi.TabIndex = 6;
             this.richTextBoxDeskripsi.Text = "";
             // 
             // label8
@@ -97,7 +97,7 @@
             this.label8.Location = new System.Drawing.Point(17, 198);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 22);
-            this.label8.TabIndex = 12;
+            this.label8.TabIndex = 13;
             this.label8.Text = "Deskripsi:";
             // 
             // textBoxJenisBarang
@@ -105,7 +105,7 @@
             this.textBoxJenisBarang.Location = new System.Drawing.Point(125, 85);
             this.textBoxJenisBarang.Name = "textBoxJenisBarang";
             this.textBoxJenisBarang.Size = new System.Drawing.Size(185, 20);
-            this.textBoxJenisBarang.TabIndex = 11;
+            this.textBoxJenisBarang.TabIndex = 2;
             // 
             // label7
             // 
@@ -114,7 +114,7 @@
             this.label7.Location = new System.Drawing.Point(17, 78);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 22);
-            this.label7.TabIndex = 10;
+            this.label7.TabIndex = 9;
             this.label7.Text = "Jenis Barang:";
             // 
             // textBoxIDPenjual
@@ -122,7 +122,7 @@
             this.textBoxIDPenjual.Location = new System.Drawing.Point(125, 55);
             this.textBoxIDPenjual.Name = "textBoxIDPenjual";
             this.textBoxIDPenjual.Size = new System.Drawing.Size(185, 20);
-            this.textBoxIDPenjual.TabIndex = 9;
+            this.textBoxIDPenjual.TabIndex = 1;
             // 
             // label6
             // 
@@ -139,28 +139,28 @@
             this.textBoxStok.Location = new System.Drawing.Point(125, 142);
             this.textBoxStok.Name = "textBoxStok";
             this.textBoxStok.Size = new System.Drawing.Size(185, 20);
-            this.textBoxStok.TabIndex = 7;
+            this.textBoxStok.TabIndex = 4;
             // 
             // textBoxHarga
             // 
             this.textBoxHarga.Location = new System.Drawing.Point(125, 172);
             this.textBoxHarga.Name = "textBoxHarga";
             this.textBoxHarga.Size = new System.Drawing.Size(185, 20);
-            this.textBoxHarga.TabIndex = 6;
+            this.textBoxHarga.TabIndex = 5;
             // 
             // textBoxNama
             // 
             this.textBoxNama.Location = new System.Drawing.Point(125, 111);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(185, 20);
-            this.textBoxNama.TabIndex = 5;
+            this.textBoxNama.TabIndex = 3;
             // 
             // textBoxIDBarang
             // 
             this.textBoxIDBarang.Location = new System.Drawing.Point(125, 22);
             this.textBoxIDBarang.Name = "textBoxIDBarang";
             this.textBoxIDBarang.Size = new System.Drawing.Size(185, 20);
-            this.textBoxIDBarang.TabIndex = 4;
+            this.textBoxIDBarang.TabIndex = 0;
             // 
             // label5
             // 
@@ -169,7 +169,7 @@
             this.label5.Location = new System.Drawing.Point(17, 139);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 22);
-            this.label5.TabIndex = 3;
+            this.label5.TabIndex = 11;
             this.label5.Text = "Stok:";
             // 
             // label4
@@ -179,7 +179,7 @@
             this.label4.Location = new System.Drawing.Point(17, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 22);
-            this.label4.TabIndex = 2;
+            this.label4.TabIndex = 12;
             this.label4.Text = "Harga:";
             // 
             // label3
@@ -189,7 +189,7 @@
             this.label3.Location = new System.Drawing.Point(17, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 22);
-            this.label3.TabIndex = 1;
+            this.label3.TabIndex = 10;
             this.label3.Text = "Nama:";
             // 
             // label2
@@ -199,7 +199,7 @@
             this.label2.Location = new System.Drawing.Point(17, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 22);
-            this.label2.TabIndex = 0;
+            this.label2.TabIndex = 7;
             this.label2.Text = "ID Barang:";
             // 
             // buttonSimpan
@@ -210,7 +210,7 @@
             this.buttonSimpan.Location = new System.Drawing.Point(262, 377);
             this.buttonSimpan.Name = "buttonSimpan";
             this.buttonSimpan.Size = new System.Drawing.Size(95, 36);
-            this.buttonSimpan.TabIndex = 2;
+            this.buttonSimpan.TabIndex = 1;
             this.buttonSimpan.Text = "SIMPAN";
             this.buttonSimpan.UseVisualStyleBackColor = false;
             this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
@@ -223,7 +223,7 @@
             this.buttonKeluar.Location = new System.Drawing.Point(147, 377);
             this.buttonKeluar.Name = "buttonKeluar";
             this.buttonKeluar.Size = new System.Drawing.Size(95, 36);
-            this.buttonKeluar.TabIndex = 3;
+            this.buttonKeluar.TabIndex = 2;
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
             this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);

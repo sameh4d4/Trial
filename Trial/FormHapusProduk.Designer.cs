@@ -60,6 +60,7 @@
             this.buttonKeluar.TabIndex = 7;
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
+            this.buttonKeluar.Click += new System.EventHandler(this.buttonKeluar_Click);
             // 
             // buttonHapus
             // 
@@ -91,6 +92,7 @@
             this.textBoxIDBarang.Name = "textBoxIDBarang";
             this.textBoxIDBarang.Size = new System.Drawing.Size(185, 20);
             this.textBoxIDBarang.TabIndex = 4;
+            this.textBoxIDBarang.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxIDBarang_KeyDown);
             // 
             // label2
             // 
@@ -239,6 +241,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormHapusProduk";
             this.Text = "FormHapusProduk";
+            this.Load += new System.EventHandler(this.FormHapusProduk_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
