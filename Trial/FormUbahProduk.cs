@@ -22,7 +22,7 @@ namespace Trial
             try
             {
 
-                Barang b = new Barang(int.Parse(textBoxIDBarang.Text), int.Parse(textBoxIDPenjual.Text), textBoxJenisBarang.Text, textBoxNama.Text, int.Parse(textBoxStok.Text), int.Parse(textBoxHarga.Text), richTextBoxDeskripsi.Text);
+                Barang b = new Barang(int.Parse(textBoxIDBarang.Text), textBoxIDPenjual.Text, textBoxJenisBarang.Text, textBoxNama.Text, int.Parse(textBoxStok.Text), int.Parse(textBoxHarga.Text), richTextBoxDeskripsi.Text);
                 Barang.UbahData(b);
                 MessageBox.Show("Data barang diubah.", "informasi");
 
