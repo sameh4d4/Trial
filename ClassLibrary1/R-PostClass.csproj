@@ -38,6 +38,9 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,9 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Barang.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Cetak.cs" />
+    <Compile Include="DetilBarang.cs" />
     <Compile Include="Koneksi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transaksi.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
