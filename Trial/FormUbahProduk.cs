@@ -18,7 +18,7 @@ namespace Trial
 
         }
         FormDaftarProduk daftar;
-
+       
         private void buttonUbah_Click(object sender, EventArgs e)
         {
             try
