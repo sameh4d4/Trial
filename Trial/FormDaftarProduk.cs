@@ -50,7 +50,7 @@ namespace Trial
             if (i.Count > 0)
             {
                 dataGridView1.Columns.Add("IdBarang", "ID Barang");
-                dataGridView1.Columns.Add("IdPenjual", "Penjual");
+              
                 dataGridView1.Columns.Add("JenisBarang", "Jenis Barang");
                 dataGridView1.Columns.Add("NamaBarang", "Nama Barang");
                 dataGridView1.Columns.Add("Stok", "Stok");
@@ -85,7 +85,7 @@ namespace Trial
         {
             foreach (Barang b in i)
             {
-                dataGridView1.Rows.Add(b.IdBarang, b.IdPenjual, b.JenisBarang, b.NamaBarang, b.Stok, b.Harga, b.Deskripsi);
+                dataGridView1.Rows.Add(b.IdBarang,  b.JenisBarang, b.NamaBarang, b.Stok, b.Harga, b.Deskripsi);
             }
         }
 

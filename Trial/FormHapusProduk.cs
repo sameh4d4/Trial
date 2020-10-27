@@ -49,7 +49,7 @@ namespace Trial
                 }
                 Barang b= daftar.daftarBarang[idx];
                 textBoxHarga.Text = b.Harga + "";
-                textBoxIDPenjual.Text = b.IdPenjual;
+              
                 textBoxJenisBarang.Text = b.JenisBarang;
                 textBoxNama.Text = b.NamaBarang;
                 textBoxStok.Text = b.Stok + "";

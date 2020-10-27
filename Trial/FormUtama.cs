@@ -22,30 +22,9 @@ namespace Trial
             Application.Exit();
         }
 
-        private void FormUtama_Load(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            IsMdiContainer = true;
-            /*FormLogin login = new FormLogin();
-            login.Owner = this;
-            login.Show();*/
-            Enabled = false;
-        }
+    
         Form form;
-        private void kategoriToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-                
-        }
 
-        private void brandToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-                
-        }
-
-        private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void barangToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -78,9 +57,15 @@ namespace Trial
 
         }
 
-        private void masterToolStripMenuItem_Click(object sender, EventArgs e)
+    
+        private void FormUtama_Load_1(object sender, EventArgs e)
         {
-
+            WindowState = FormWindowState.Maximized;
+            IsMdiContainer = true;
+            FormLogin login = new FormLogin();
+            login.Owner = this;
+            login.Show();
+            Enabled = false;
         }
     }
 }

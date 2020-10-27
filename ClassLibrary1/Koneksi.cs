@@ -99,8 +99,6 @@ namespace ClassLibrary1
             KoneksiDB = new MySqlConnection();
 
             KoneksiDB.ConnectionString = strCon;
-
-
             Connect();
 
             UpdateAppConfig(strCon);
