@@ -149,7 +149,6 @@ namespace ClassLibrary1
                 while (hasil2.Read() == true)
                 {
                     Barang b = Barang.BacaData("idBarang", hasil2.GetValue(0).ToString())[0];
-                    //Transaksi nota = BacaData("noNota", hasil2.GetValue(1).ToString())[0];
                     int jumlah = int.Parse(hasil2.GetValue(2).ToString());
                     double subTotal = double.Parse(hasil2.GetValue(3).ToString());
                     string keterangan = hasil2.GetValue(4).ToString();
