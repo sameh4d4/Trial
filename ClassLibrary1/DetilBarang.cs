@@ -8,11 +8,12 @@ namespace ClassLibrary1
 {
     public class DetilBarang
     {
-        private User user;
         private Barang barang;
+        private Transaksi noNota;
         private int jumlah;
         private double subtotal;
         private string keterangan;
+        private User kasir;
 
         public DetilBarang()
         {
@@ -21,19 +22,21 @@ namespace ClassLibrary1
             this.Keterangan = "";
         }
 
-        public DetilBarang(User user, Barang barang, int jumlah, double subtotal, string keterangan)
+        public DetilBarang(Barang barang, Transaksi noNota, int jumlah, double subtotal, string keterangan, User kasir)
         {
-            this.User = user;
             this.Barang = barang;
+            this.NoNota = noNota;
             this.Jumlah = jumlah;
             this.Subtotal = subtotal;
             this.Keterangan = keterangan;
+            this.Kasir = kasir;
         }
 
-        public User User { get => user; set => user = value; }
         public Barang Barang { get => barang; set => barang = value; }
+        public Transaksi NoNota { get => noNota; set => noNota = value; }
         public int Jumlah { get => jumlah; set => jumlah = value; }
         public double Subtotal { get => subtotal; set => subtotal = value; }
         public string Keterangan { get => keterangan; set => keterangan = value; }
+        public User Kasir { get => kasir; set => kasir = value; }
     }
 }

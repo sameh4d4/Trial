@@ -21,8 +21,7 @@ namespace Trial
         {
             try
             {
-                User u = new User("al","admin");
-                Barang b = new Barang(int.Parse(textBoxIDBarang.Text), /*textBoxIDPenjual.Text*/u, textBoxJenisBarang.Text, textBoxNama.Text,  int.Parse(textBoxStok.Text), int.Parse(textBoxHarga.Text), richTextBoxDeskripsi.Text);
+                Barang b = new Barang(int.Parse(textBoxIDBarang.Text), textBoxJenisBarang.Text, textBoxNama.Text,  int.Parse(textBoxStok.Text), int.Parse(textBoxHarga.Text), richTextBoxDeskripsi.Text);
                 //Barang.TambahData(b);
                 FormDaftarProduk own = (FormDaftarProduk)this.Owner;
                 own.daftarBarang.Add(b);

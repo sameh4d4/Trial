@@ -74,9 +74,9 @@ namespace ClassLibrary1
             return hasilNoNota;
         }
 
-        public void TambahDetailBarang(User pembeli, User penjual, Barang barang, int jumlah, double subtotal, string keterangan)
+        public void TambahDetailBarang(Barang barang, Transaksi noNota, int jumlah, double subtotal, string keterangan, User kasir)
         {
-            DetilBarang detilBarang = new DetilBarang(penjual, barang, jumlah, subtotal, keterangan);
+            DetilBarang detilBarang = new DetilBarang(barang, noNota, jumlah, subtotal, keterangan, kasir);
             ListDetilBarang.Add(detilBarang);
         }
 
@@ -91,7 +91,7 @@ namespace ClassLibrary1
             {
                 try
                 {
-                    string sql1 = "insert into transaksi(nonota, tanggal, total, PPN, grandtotal) values ('" +
+                    string sql1 = "insert into transaksi(noNota, tanggal, total, PPN, grandtotal) values ('" +
                             transaksi.NoNota + "','" + transaksi.Tanggal.ToString("yyyy-MM-dd hh:mm:ss") + "','" +
                             transaksi.Total + "','" + transaksi.Ppn + "','" + transaksi.GrandTotal + "')";
 
@@ -99,11 +99,12 @@ namespace ClassLibrary1
 
                     foreach (DetilBarang detilBarang in transaksi.listDetilBarang)
                     {
-                        string sql2 = "insert into detilbarang(iduser, idbarang, idpenjual, nonota, jumlah, subtotal, keterangan) values('" +
+                        string sql2 = "insert into detilbarang(idBarang, noNota, jumlah, subtotal, keterangan, kasir_id) values('" +
                             detilBarang.Barang.IdBarang + "','" +
-                            detilBarang.User.Id + "','" + transaksi.NoNota + "','" +
+                            detilBarang.NoNota + "','" +
                             detilBarang.Jumlah + "','" + detilBarang.Subtotal + "','" +
-                            detilBarang.Keterangan + "')";
+                            detilBarang.Keterangan + "','" + 
+                            detilBarang.Kasir + "')";
 
                         Koneksi.JalankanPerintahDML(sql2);
                     }
@@ -143,17 +144,19 @@ namespace ClassLibrary1
 
                 List<DetilBarang> listDetil = new List<DetilBarang>();
                 string sql2 = "select * from detilbarang where noNota='" + noNota + "'";
+                Transaksi transaksi = new Transaksi(noNota, tgl, total, ppn, grandTotal);
                 MySqlDataReader hasil2 = Koneksi.JalankanPerintahQuery(sql2);
                 while (hasil2.Read() == true)
                 {
-                    User u = User.BacaData("id", hasil2.GetValue(0).ToString())[0];
-                    Barang b = Barang.BacaData("idBarang", hasil2.GetValue(1).ToString())[0];
-                    User p = User.BacaData("id", hasil2.GetValue(2).ToString())[0];
-                    string nota = hasil2.GetValue(3).ToString();
-                    int jumlah = int.Parse(hasil2.GetValue(4).ToString());
-                    double subTotal = double.Parse(hasil2.GetValue(5).ToString());
-                    string keterangan = hasil2.GetValue(6).ToString();
-                    DetilBarang detil = new DetilBarang(p, b, jumlah, subTotal, keterangan);
+                    Barang b = Barang.BacaData("idBarang", hasil2.GetValue(0).ToString())[0];
+                    //Transaksi nota = BacaData("noNota", hasil2.GetValue(1).ToString())[0];
+                    int jumlah = int.Parse(hasil2.GetValue(2).ToString());
+                    double subTotal = double.Parse(hasil2.GetValue(3).ToString());
+                    string keterangan = hasil2.GetValue(4).ToString();
+                    User kasir = User.BacaData("id", hasil2.GetValue(5).ToString())[0];
+
+                    transaksi.TambahDetailBarang(b, transaksi, jumlah, subTotal, keterangan, kasir);
+                    DetilBarang detil = new DetilBarang(b, transaksi, jumlah, subTotal, keterangan, kasir);
                     listDetil.Add(detil);
                 }
                 Transaksi t = new Transaksi(noNota, tgl, total, ppn, grandTotal, listDetil);
@@ -164,19 +167,20 @@ namespace ClassLibrary1
 
         public static List<Transaksi> BacaDataLaporan(DateTime tglAwal, DateTime tglAkhir)
         {
+            
             string sql1 = "";
             if (tglAwal.Date != tglAkhir.Date)
             {
-                sql1 = "SELECT t.nonota, t.tanggal, t.total, t.ppn, t.grandtotal " +
+                sql1 = "SELECT t.noNota, t.tanggal, t.total, t.ppn, t.grandTotal " +
                     "FROM transaksi t WHERE Date(tanggal) between '" + tglAwal.ToString("yyyy-MM-dd") + "' and '" +
                     tglAkhir.ToString("yyyy-MM-dd") + "'" +
-                    " ORDER BY t.nonota DESC";
+                    " ORDER BY t.noNota DESC";
             }
             else
             {
-                sql1 = "SELECT t.nonota, t.tanggal, t.total, t.ppn, t.grandtotal " +
+                sql1 = "SELECT t.noNota, t.tanggal, t.total, t.ppn, t.grandTotal " +
                     "FROM transaksi t WHERE Date(tanggal)='" + tglAwal.ToString("yyyy-MM-dd") + "'" +
-                    " ORDER BY t.nonota DESC";
+                    " ORDER BY t.noNota DESC";
             }
 
             MySqlDataReader hasilData1 = Koneksi.JalankanPerintahQuery(sql1);
@@ -189,24 +193,22 @@ namespace ClassLibrary1
                 Transaksi transaksi = new Transaksi(nomorNota, tglNota, double.Parse(hasilData1.GetValue(2).ToString()),
                     double.Parse(hasilData1.GetValue(3).ToString()), double.Parse(hasilData1.GetValue(4).ToString()));
 
-                string sql2 = "SELECT du.id, b.idbarang, dp.id, dt.jumlah, dt.subtotal, dt.keterangan " +
-                              "FROM detilbarang dt inner join transaksi t on t.nonota=dt.nonota " +
-                              "INNER join user du ON dt.iduser=du.id " +
-                              "INNER JOIN user dp on dp.id=dt.iduser " +
-                              "INNER JOIN barang b on b.idbarang=dt.idbarang " +
-                              "WHERE t.nonota='" + nomorNota + "'";
+                string sql2 = "SELECT b.idBarang, dt.noNota, dt.jumlah, dt.subTotal, dt.keterangan, k.id " +
+                              "FROM detilbarang dt inner join transaksi t on t.noNota=dt.noNota " +
+                              "INNER join user k ON dt.kasir_id=k.id " +
+                              "INNER JOIN barang b on b.idBarang=dt.idBarang " +
+                              "WHERE t.noNota='" + nomorNota + "'";
                 MySqlDataReader hasilData2 = Koneksi.JalankanPerintahQuery(sql2);
 
                 while (hasilData2.Read() == true)
                 {
-                    List<User> listUser = User.BacaData("id", hasilData2.GetValue(0).ToString());
-                    List<Barang> listBarang = Barang.BacaData("idbarang", hasilData2.GetValue(1).ToString());
-                    List<User> listUser1 = User.BacaData("id", hasilData2.GetValue(2).ToString());
+                    List<Barang> listBarang = Barang.BacaData("idbarang", hasilData2.GetValue(0).ToString());
+                    List<User> listKasir = User.BacaData("id", hasilData2.GetValue(5).ToString());
+                    List<Transaksi> listTransaksi = Transaksi.BacaData("noNota", hasilData2.GetValue(1).ToString());
 
-                    transaksi.TambahDetailBarang(listUser[0], listUser1[0], listBarang[0], int.Parse(hasilData2.GetValue(3).ToString()),
-                        double.Parse(hasilData2.GetValue(4).ToString()), hasilData2.GetValue(5).ToString());
+                    transaksi.TambahDetailBarang(listBarang[0], listTransaksi[0], int.Parse(hasilData2.GetValue(2).ToString()),
+                        double.Parse(hasilData2.GetValue(3).ToString()), hasilData2.GetValue(4).ToString(), listKasir[0]);
                 }
-
                 listHasilData.Add(transaksi);
                 hasilData2.Close();
             }
@@ -243,13 +245,13 @@ namespace ClassLibrary1
                 double ppn = nota.Ppn;
                 foreach (DetilBarang db in nota.ListDetilBarang)
                 {
-                    string namaPenjual = db.User.Name;
+                    string namaKasir = db.Kasir.Name;
                     string namaBarang = db.Barang.NamaBarang;
                     string deskripsiBarang = db.Barang.Deskripsi;
                     // jika nama terlalu panjang maka tampilkan 30 karakter pertama saja
-                    if (namaPenjual.Length > 30)
+                    if (namaKasir.Length > 30)
                     {
-                        namaPenjual = namaPenjual.Substring(0, 30);
+                        namaKasir = namaKasir.Substring(0, 30);
                     }
                     if (namaBarang.Length > 30)
                     {
@@ -263,7 +265,7 @@ namespace ClassLibrary1
                     double subtotal = db.Subtotal;
                     double harga = db.Barang.Harga;
 
-                    file.Write(namaPenjual.PadRight(30, ' '));
+                    file.Write(namaKasir.PadRight(30, ' '));
                     file.Write(namaBarang.PadRight(30, ' '));
                     file.Write(jumlah.ToString().PadRight(3, ' '));
                     file.Write(harga.ToString("#,###").PadLeft(7, ' '));

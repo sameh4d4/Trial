@@ -42,21 +42,6 @@ namespace Trial
             }
         }
 
-        private void penjualanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pembelianToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
     
         private void FormUtama_Load_1(object sender, EventArgs e)
         {
@@ -66,6 +51,27 @@ namespace Trial
             login.Owner = this;
             login.Show();
             Enabled = false;
+        }
+
+        private void penjualanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void penjualanToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            form = Application.OpenForms["FormLaporanPenjualan"];
+            if (form == null)
+            {
+                FormLaporanPenjualan laporanPenjualan = new FormLaporanPenjualan();
+                laporanPenjualan.MdiParent = this;
+                laporanPenjualan.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
         }
     }
 }

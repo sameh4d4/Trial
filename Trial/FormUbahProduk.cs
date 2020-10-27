@@ -23,8 +23,7 @@ namespace Trial
         {
             try
             {
-                User u = new User("al", "admin");
-                Barang b = new Barang(int.Parse(textBoxIDBarang.Text),u /*textBoxIDPenjual.Text*/, textBoxJenisBarang.Text, textBoxNama.Text, int.Parse(textBoxStok.Text), int.Parse(textBoxHarga.Text), richTextBoxDeskripsi.Text);
+                Barang b = new Barang(int.Parse(textBoxIDBarang.Text), textBoxJenisBarang.Text, textBoxNama.Text, int.Parse(textBoxStok.Text), int.Parse(textBoxHarga.Text), richTextBoxDeskripsi.Text);
                 daftar.daftarBarang[idx]=b;
                 daftar.UpdateDG(daftar.daftarBarang);
                 MessageBox.Show("Data barang diubah.", "informasi");

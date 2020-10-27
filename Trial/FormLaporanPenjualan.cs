@@ -24,7 +24,20 @@ namespace Trial
 
         private void buttonCari_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                listTransaksi = Transaksi.BacaDataLaporan(dateTimePickerStart.Value, dateTimePickerEnd.Value);
+                FormatDataGrid();
+                TampilDataGrid();
+            }
+            catch (NullReferenceException exNull)
+            {
+                FormLaporanPenjualan_Load(this, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Pesan kesalahan: " + ex.Message);
+            }
         }
 
         private void FormatDataGrid()
@@ -90,17 +103,14 @@ namespace Trial
 
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void FormLaporanPenjualan_Load(object sender, EventArgs e)
         {
             try
             {
-                this.FormBorderStyle = FormBorderStyle.None;
-                this.Dock = DockStyle.Fill;
-
-                listTransaksi = Transaksi.BacaData("", "");
+                listTransaksi = Transaksi.BacaDataLaporan(dateTimePickerStart.Value, dateTimePickerEnd.Value);
                 FormatDataGrid();
                 TampilDataGrid();
             }

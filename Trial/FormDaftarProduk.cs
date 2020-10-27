@@ -91,6 +91,7 @@ namespace Trial
 
         private void FormDaftarProduk_Load(object sender, EventArgs e)
         {
+            daftarBarang = Barang.BacaData("", "");
             UpdateDG(daftarBarang);
         }
     }

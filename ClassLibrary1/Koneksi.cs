@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,7 +57,6 @@ namespace ClassLibrary1
         {
             Koneksi k = new Koneksi();
             MySqlCommand c = new MySqlCommand(sql,k.KoneksiDB);
-            //bentar
             MySqlDataReader hasil = c.ExecuteReader();
             return hasil;
         }
@@ -83,10 +83,9 @@ namespace ClassLibrary1
         public Koneksi()
         {
             koneksiDB = new MySqlConnection();
-
             //set connection string sesua app config
             koneksiDB.ConnectionString = ConfigurationManager.ConnectionStrings["namakoneksi"].ConnectionString;
-
+         
             //panggil method connect
             Connect();
         }
