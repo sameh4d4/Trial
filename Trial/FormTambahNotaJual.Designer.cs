@@ -32,6 +32,9 @@
             this.buttonKeluar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.labelHarga = new System.Windows.Forms.Label();
             this.labelNamaBarang = new System.Windows.Forms.Label();
             this.labelGrandTotal = new System.Windows.Forms.Label();
@@ -49,16 +52,15 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBoxJumlah = new System.Windows.Forms.TextBox();
             this.textBoxKet = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSimpan
             // 
-            this.buttonSimpan.BackColor = System.Drawing.Color.Navy;
+            this.buttonSimpan.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonSimpan.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSimpan.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSimpan.ForeColor = System.Drawing.Color.White;
             this.buttonSimpan.Location = new System.Drawing.Point(503, 508);
@@ -71,7 +73,9 @@
             // 
             // buttonKeluar
             // 
-            this.buttonKeluar.BackColor = System.Drawing.Color.Navy;
+            this.buttonKeluar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonKeluar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonKeluar.ForeColor = System.Drawing.Color.White;
             this.buttonKeluar.Location = new System.Drawing.Point(642, 508);
@@ -84,9 +88,9 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Navy;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Gainsboro;
+            this.label1.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(737, 44);
@@ -96,7 +100,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textBoxId);
             this.panel1.Controls.Add(this.label2);
@@ -122,14 +126,42 @@
             this.panel1.Size = new System.Drawing.Size(737, 435);
             this.panel1.TabIndex = 0;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(47, 83);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 15);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "PPN : 10%";
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.Location = new System.Drawing.Point(24, 195);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(59, 20);
+            this.textBoxId.TabIndex = 1;
+            this.textBoxId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxId_KeyDown);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(615, 178);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 15);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Keterangan";
+            // 
             // labelHarga
             // 
             this.labelHarga.BackColor = System.Drawing.Color.Lavender;
             this.labelHarga.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelHarga.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHarga.Location = new System.Drawing.Point(458, 191);
+            this.labelHarga.Location = new System.Drawing.Point(448, 195);
             this.labelHarga.Name = "labelHarga";
-            this.labelHarga.Size = new System.Drawing.Size(66, 27);
+            this.labelHarga.Size = new System.Drawing.Size(77, 20);
             this.labelHarga.TabIndex = 3;
             this.labelHarga.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -138,18 +170,18 @@
             this.labelNamaBarang.BackColor = System.Drawing.Color.Lavender;
             this.labelNamaBarang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelNamaBarang.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNamaBarang.Location = new System.Drawing.Point(82, 191);
+            this.labelNamaBarang.Location = new System.Drawing.Point(82, 195);
             this.labelNamaBarang.Name = "labelNamaBarang";
-            this.labelNamaBarang.Size = new System.Drawing.Size(376, 27);
+            this.labelNamaBarang.Size = new System.Drawing.Size(373, 20);
             this.labelNamaBarang.TabIndex = 2;
             this.labelNamaBarang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelGrandTotal
             // 
-            this.labelGrandTotal.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGrandTotal.Location = new System.Drawing.Point(514, 117);
+            this.labelGrandTotal.Font = new System.Drawing.Font("Open Sans", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGrandTotal.Location = new System.Drawing.Point(514, 97);
             this.labelGrandTotal.Name = "labelGrandTotal";
-            this.labelGrandTotal.Size = new System.Drawing.Size(200, 51);
+            this.labelGrandTotal.Size = new System.Drawing.Size(200, 65);
             this.labelGrandTotal.TabIndex = 12;
             this.labelGrandTotal.Text = "0";
             this.labelGrandTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -158,7 +190,7 @@
             // 
             this.dateTimePickerTglNota.Enabled = false;
             this.dateTimePickerTglNota.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerTglNota.Location = new System.Drawing.Point(112, 45);
+            this.dateTimePickerTglNota.Location = new System.Drawing.Point(112, 46);
             this.dateTimePickerTglNota.Name = "dateTimePickerTglNota";
             this.dateTimePickerTglNota.Size = new System.Drawing.Size(123, 20);
             this.dateTimePickerTglNota.TabIndex = 0;
@@ -167,9 +199,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(54, 49);
+            this.label9.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(47, 48);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.Size = new System.Drawing.Size(53, 15);
             this.label9.TabIndex = 17;
             this.label9.Text = "Tanggal :";
             // 
@@ -184,18 +217,20 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(50, 22);
+            this.label7.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(47, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.Size = new System.Drawing.Size(59, 15);
             this.label7.TabIndex = 16;
             this.label7.Text = "No. Nota :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(52, 137);
+            this.label8.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(47, 134);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
+            this.label8.Size = new System.Drawing.Size(56, 15);
             this.label8.TabIndex = 15;
             this.label8.Text = "Pegawai :";
             // 
@@ -203,10 +238,10 @@
             // 
             this.labelNamaPegawai.AutoSize = true;
             this.labelNamaPegawai.BackColor = System.Drawing.Color.Transparent;
-            this.labelNamaPegawai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNamaPegawai.Location = new System.Drawing.Point(158, 134);
+            this.labelNamaPegawai.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNamaPegawai.Location = new System.Drawing.Point(160, 132);
             this.labelNamaPegawai.Name = "labelNamaPegawai";
-            this.labelNamaPegawai.Size = new System.Drawing.Size(43, 16);
+            this.labelNamaPegawai.Size = new System.Drawing.Size(48, 18);
             this.labelNamaPegawai.TabIndex = 13;
             this.labelNamaPegawai.Text = "Nama";
             this.labelNamaPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,10 +250,10 @@
             // 
             this.labelKodePegawai.AutoSize = true;
             this.labelKodePegawai.BackColor = System.Drawing.Color.Transparent;
-            this.labelKodePegawai.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKodePegawai.Location = new System.Drawing.Point(110, 134);
+            this.labelKodePegawai.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKodePegawai.Location = new System.Drawing.Point(112, 132);
             this.labelKodePegawai.Name = "labelKodePegawai";
-            this.labelKodePegawai.Size = new System.Drawing.Size(39, 16);
+            this.labelKodePegawai.Size = new System.Drawing.Size(40, 18);
             this.labelKodePegawai.TabIndex = 14;
             this.labelKodePegawai.Text = "kode";
             this.labelKodePegawai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,38 +261,42 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(537, 178);
+            this.label6.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(539, 178);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.Size = new System.Drawing.Size(43, 15);
             this.label6.TabIndex = 10;
             this.label6.Text = "Jumlah";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(471, 178);
+            this.label5.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(466, 179);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.Size = new System.Drawing.Size(37, 15);
             this.label5.TabIndex = 9;
             this.label5.Text = "Harga";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(82, 178);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(37, 15);
             this.label4.TabIndex = 8;
             this.label4.Text = "Nama";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 178);
+            this.label3.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(44, 179);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(16, 13);
+            this.label3.Size = new System.Drawing.Size(18, 15);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Id";
+            this.label3.Text = "ID";
             // 
             // dataGridView1
             // 
@@ -269,7 +308,7 @@
             // 
             // textBoxJumlah
             // 
-            this.textBoxJumlah.Location = new System.Drawing.Point(524, 194);
+            this.textBoxJumlah.Location = new System.Drawing.Point(524, 195);
             this.textBoxJumlah.Name = "textBoxJumlah";
             this.textBoxJumlah.Size = new System.Drawing.Size(72, 20);
             this.textBoxJumlah.TabIndex = 4;
@@ -277,43 +316,18 @@
             // 
             // textBoxKet
             // 
-            this.textBoxKet.Location = new System.Drawing.Point(597, 194);
+            this.textBoxKet.Location = new System.Drawing.Point(595, 195);
             this.textBoxKet.Name = "textBoxKet";
             this.textBoxKet.Size = new System.Drawing.Size(114, 20);
             this.textBoxKet.TabIndex = 5;
             this.textBoxKet.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxKet_KeyDown);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(608, 178);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Keterangan";
-            // 
-            // textBoxId
-            // 
-            this.textBoxId.Location = new System.Drawing.Point(22, 195);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(61, 20);
-            this.textBoxId.TabIndex = 1;
-            this.textBoxId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxId_KeyDown);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(59, 84);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 13);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "PPN : 10%";
-            // 
             // FormTambahNotaJual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 557);
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.ClientSize = new System.Drawing.Size(761, 553);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.label1);
