@@ -49,7 +49,7 @@ namespace ClassLibrary1
 
         public static string GenerateNoNota()
         {
-            string sql = "select RIGHT(nonota, 3) as NoUrutTransaksi from transaksi " +
+            string sql = "select RIGHT(noNota, 3) as NoUrutTransaksi from transaksi " +
                             "where Date(tanggal) = Date(CURRENT_DATE) " +
                             "order by tanggal DESC limit 1";
 
@@ -70,7 +70,11 @@ namespace ClassLibrary1
                                         DateTime.Now.Day.ToString().PadLeft(2, '0') + "001";
                 }
             }
-
+            else
+            {
+                hasilNoNota = DateTime.Now.Year + DateTime.Now.Month.ToString().PadLeft(2, '0') +
+                                        DateTime.Now.Day.ToString().PadLeft(2, '0') + "001";
+            }
             return hasilNoNota;
         }
 
@@ -101,10 +105,10 @@ namespace ClassLibrary1
                     {
                         string sql2 = "insert into detilbarang(idBarang, noNota, jumlah, subtotal, keterangan, kasir_id) values('" +
                             detilBarang.Barang.IdBarang + "','" +
-                            detilBarang.NoNota + "','" +
+                            detilBarang.NoNota.NoNota + "','" +
                             detilBarang.Jumlah + "','" + detilBarang.Subtotal + "','" +
                             detilBarang.Keterangan + "','" + 
-                            detilBarang.Kasir + "')";
+                            detilBarang.Kasir.Id + "')";
 
                         Koneksi.JalankanPerintahDML(sql2);
                     }

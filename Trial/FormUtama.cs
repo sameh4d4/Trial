@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Trial
 {
     public partial class FormUtama : Form
     {
+        public User u=null;
         public FormUtama()
         {
             InitializeComponent();
@@ -55,7 +57,18 @@ namespace Trial
 
         private void penjualanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            form = Application.OpenForms["FormTambahNotaJual"];
+            if (form == null)
+            {
+                FormTambahNotaJual laporanPenjualan = new FormTambahNotaJual();
+                laporanPenjualan.MdiParent = this;
+                laporanPenjualan.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
         }
 
         private void penjualanToolStripMenuItem1_Click(object sender, EventArgs e)

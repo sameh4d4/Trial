@@ -26,10 +26,39 @@ namespace Trial
                 string pass = textBoxPwd.Text;
 
                 Koneksi k = new Koneksi("localhost", "dbmtt", "root", "");
-                //nah disini cek username pass yang diinput ntar
-                //mau buat meth di class Koneksi juga gpp,meth buat cek userpass kek di pweb lul
-                //imi aku ambil alih dulu
-                List<User> lu = User.BacaData("","");
+                List<User> lii = User.BacaData("username", id);
+                bool passOK = false;
+                if (lii.Count > 0)
+                {
+                    User sss = null;
+                    foreach(User u in lii)
+                    {
+                        if (u.Password == pass)
+                        {
+                            passOK = true;
+                            sss = u;
+                            break;
+                        }
+                    }
+                    if (passOK)
+                    {
+                        MessageBox.Show("berhasil login", "information");
+                        FormUtama formUtama = (FormUtama)this.Owner;
+                        formUtama.u = sss;
+                        formUtama.Enabled = true;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("anda pembobol coba lagi!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("anda siapa?");
+                }
+
+                /*List<User> lu = User.BacaData("","");
                 bool cekUser = false;
                 string passdb = "";
                 foreach(User pengguna in lu)
@@ -59,7 +88,7 @@ namespace Trial
                 else
                 {
                     MessageBox.Show("anda siapa?");
-                }
+                }*/
                
             }
             catch(Exception ex)
@@ -72,6 +101,22 @@ namespace Trial
         {
             Application.Exit();
             //dah bert ku tinggal bentar
+        }
+
+        private void textBoxUid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(textBoxUid, e);
+            }
+        }
+
+        private void textBoxPwd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(textBoxPwd, e);
+            }
         }
     }
 }

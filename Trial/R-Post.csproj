@@ -95,6 +95,12 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahNotaJual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahNotaJual.Designer.cs">
+      <DependentUpon>FormTambahNotaJual.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTambahPegawai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahNotaJual.resx">
+      <DependentUpon>FormTambahNotaJual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahPegawai.resx">
       <DependentUpon>FormTambahPegawai.cs</DependentUpon>
