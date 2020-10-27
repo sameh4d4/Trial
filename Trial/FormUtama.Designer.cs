@@ -112,7 +112,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormUtama";
             this.Text = "FormUtama";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -125,8 +125,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem masterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem barangToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transaksiToolStripMenuItem;
@@ -134,5 +132,6 @@
         private System.Windows.Forms.ToolStripMenuItem pembelianToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem labaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        public System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

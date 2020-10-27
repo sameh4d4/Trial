@@ -18,7 +18,6 @@ namespace ClassLibrary1
 
         public void Connect()
         {
-
             if (KoneksiDB.State == System.Data.ConnectionState.Open)
             {
                 KoneksiDB.Close();
@@ -56,7 +55,8 @@ namespace ClassLibrary1
         public static MySqlDataReader JalankanPerintahQuery(string sql)
         {
             Koneksi k = new Koneksi();
-            MySqlCommand c = new MySqlCommand(sql, k.KoneksiDB);
+            MySqlCommand c = new MySqlCommand(sql,k.KoneksiDB);
+            //bentar
             MySqlDataReader hasil = c.ExecuteReader();
             return hasil;
         }
@@ -95,12 +95,10 @@ namespace ClassLibrary1
         public Koneksi(string pServer, string pDatabase, string pUsername, string pPassword)
         {
             string strCon = "server=" + pServer + ";database=" + pDatabase + ";uid=" + pUsername + ";password=" + pPassword;
-
+            //string strCon = "server=" + pServer + ";database=" + pDatabase + ";uid=" + pUsername + ";password=" + pPassword+";CharSet=utf8";
             KoneksiDB = new MySqlConnection();
-
             KoneksiDB.ConnectionString = strCon;
             Connect();
-
             UpdateAppConfig(strCon);
         }
 
