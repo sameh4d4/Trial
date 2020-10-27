@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2020 at 10:56 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.29
+-- Generation Time: Oct 27, 2020 at 05:16 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_mtt`
+-- Database: `dbmtt`
 --
 
 -- --------------------------------------------------------
@@ -55,7 +55,7 @@ CREATE TABLE `detilbarang` (
   `noNota` varchar(15) NOT NULL,
   `jumlah` int(11) DEFAULT NULL,
   `subTotal` double DEFAULT NULL,
-  `keterangan` varchar(105) DEFAULT NULL,
+  `keterangan` varchar(105) NOT NULL,
   `kasir_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -113,7 +113,7 @@ ALTER TABLE `barang`
 -- Indexes for table `detilbarang`
 --
 ALTER TABLE `detilbarang`
-  ADD PRIMARY KEY (`idBarang`,`noNota`),
+  ADD PRIMARY KEY (`keterangan`),
   ADD KEY `fk_detilBarang_transaksi1_idx` (`noNota`),
   ADD KEY `fk_detilBarang_barang1_idx` (`idBarang`),
   ADD KEY `fk_detilbarang_User1_idx` (`kasir_id`);
