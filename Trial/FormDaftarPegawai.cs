@@ -78,7 +78,7 @@ namespace Trial
 
         private void buttonHapus_Click(object sender, EventArgs e)
         {
-            FormUbahPegawai frm = new FormUbahPegawai();
+            FormHapusPegawai frm = new FormHapusPegawai();
             frm.Owner = this;
             frm.Show();
         }

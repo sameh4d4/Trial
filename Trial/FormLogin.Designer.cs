@@ -47,6 +47,8 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnLogin.Location = new System.Drawing.Point(166, 63);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
@@ -54,7 +56,7 @@
             this.btnLogin.Size = new System.Drawing.Size(63, 24);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // textBoxPwd
@@ -93,6 +95,7 @@
             // buttonExit
             // 
             this.buttonExit.BackColor = System.Drawing.Color.Firebrick;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonExit.Location = new System.Drawing.Point(81, 63);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(2);

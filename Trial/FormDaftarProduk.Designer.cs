@@ -89,7 +89,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Gainsboro;
-            this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 14F);
+            this.label1.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
@@ -120,7 +120,7 @@
             this.buttonHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHapus.Font = new System.Drawing.Font("Open Sans Semibold", 12F);
             this.buttonHapus.ForeColor = System.Drawing.Color.White;
-            this.buttonHapus.Location = new System.Drawing.Point(233, 406);
+            this.buttonHapus.Location = new System.Drawing.Point(206, 405);
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(91, 37);
             this.buttonHapus.TabIndex = 26;
@@ -135,7 +135,7 @@
             this.buttonUbah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUbah.Font = new System.Drawing.Font("Open Sans Semibold", 12F);
             this.buttonUbah.ForeColor = System.Drawing.Color.White;
-            this.buttonUbah.Location = new System.Drawing.Point(136, 406);
+            this.buttonUbah.Location = new System.Drawing.Point(109, 405);
             this.buttonUbah.Name = "buttonUbah";
             this.buttonUbah.Size = new System.Drawing.Size(91, 37);
             this.buttonUbah.TabIndex = 25;
@@ -150,7 +150,7 @@
             this.buttonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTambah.Font = new System.Drawing.Font("Open Sans Semibold", 12F);
             this.buttonTambah.ForeColor = System.Drawing.Color.White;
-            this.buttonTambah.Location = new System.Drawing.Point(39, 406);
+            this.buttonTambah.Location = new System.Drawing.Point(12, 405);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(91, 37);
             this.buttonTambah.TabIndex = 24;

@@ -151,7 +151,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Open Sans Semibold", 12F);
-            this.label7.Location = new System.Drawing.Point(17, 48);
+            this.label7.Location = new System.Drawing.Point(17, 46);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 22);
             this.label7.TabIndex = 22;
@@ -182,7 +182,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Open Sans Semibold", 12F);
-            this.label5.Location = new System.Drawing.Point(17, 100);
+            this.label5.Location = new System.Drawing.Point(17, 98);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 22);
             this.label5.TabIndex = 16;
@@ -192,7 +192,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Open Sans Semibold", 12F);
-            this.label4.Location = new System.Drawing.Point(17, 126);
+            this.label4.Location = new System.Drawing.Point(17, 124);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 22);
             this.label4.TabIndex = 15;
@@ -202,7 +202,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Open Sans Semibold", 12F);
-            this.label3.Location = new System.Drawing.Point(17, 74);
+            this.label3.Location = new System.Drawing.Point(17, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 22);
             this.label3.TabIndex = 14;
@@ -213,7 +213,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(359, 357);
+            this.ClientSize = new System.Drawing.Size(359, 355);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonHapus);
             this.Controls.Add(this.label1);

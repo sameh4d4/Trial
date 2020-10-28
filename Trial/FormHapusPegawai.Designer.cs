@@ -1,6 +1,6 @@
 ﻿namespace Trial
 {
-    partial class FormUbahPegawai
+    partial class FormHapusPegawai
     {
         /// <summary>
         /// Required designer variable.
@@ -46,10 +46,9 @@
             this.buttonKeluar.BackColor = System.Drawing.Color.RoyalBlue;
             this.buttonKeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeluar.Font = new System.Drawing.Font("Open Sans Semibold", 12F);
-            this.buttonKeluar.Location = new System.Drawing.Point(180, 314);
-            this.buttonKeluar.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonKeluar.Location = new System.Drawing.Point(126, 155);
             this.buttonKeluar.Name = "buttonKeluar";
-            this.buttonKeluar.Size = new System.Drawing.Size(127, 44);
+            this.buttonKeluar.Size = new System.Drawing.Size(95, 36);
             this.buttonKeluar.TabIndex = 10;
             this.buttonKeluar.Text = "KELUAR";
             this.buttonKeluar.UseVisualStyleBackColor = false;
@@ -59,70 +58,63 @@
             this.buttonSimpan.BackColor = System.Drawing.Color.RoyalBlue;
             this.buttonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSimpan.Font = new System.Drawing.Font("Open Sans Semibold", 12F);
-            this.buttonSimpan.Location = new System.Drawing.Point(337, 314);
-            this.buttonSimpan.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSimpan.Location = new System.Drawing.Point(247, 155);
             this.buttonSimpan.Name = "buttonSimpan";
-            this.buttonSimpan.Size = new System.Drawing.Size(127, 44);
+            this.buttonSimpan.Size = new System.Drawing.Size(95, 36);
             this.buttonSimpan.TabIndex = 9;
             this.buttonSimpan.Text = "SIMPAN";
             this.buttonSimpan.UseVisualStyleBackColor = false;
             // 
             // textBoxJenisBarang
             // 
-            this.textBoxJenisBarang.Location = new System.Drawing.Point(167, 105);
-            this.textBoxJenisBarang.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxJenisBarang.Location = new System.Drawing.Point(125, 67);
             this.textBoxJenisBarang.Name = "textBoxJenisBarang";
-            this.textBoxJenisBarang.Size = new System.Drawing.Size(245, 22);
+            this.textBoxJenisBarang.Size = new System.Drawing.Size(185, 20);
             this.textBoxJenisBarang.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(23, 96);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(17, 67);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 27);
+            this.label7.Size = new System.Drawing.Size(51, 22);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Role:";
+            this.label7.Text = "Role :";
             // 
             // textBoxIDPenjual
             // 
-            this.textBoxIDPenjual.Location = new System.Drawing.Point(167, 68);
-            this.textBoxIDPenjual.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxIDPenjual.Location = new System.Drawing.Point(125, 41);
             this.textBoxIDPenjual.Name = "textBoxIDPenjual";
-            this.textBoxIDPenjual.Size = new System.Drawing.Size(245, 22);
+            this.textBoxIDPenjual.Size = new System.Drawing.Size(185, 20);
             this.textBoxIDPenjual.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 59);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(17, 41);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 27);
+            this.label6.Size = new System.Drawing.Size(64, 22);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Nama";
+            this.label6.Text = "Nama :";
             // 
             // textBoxIDBarang
             // 
-            this.textBoxIDBarang.Location = new System.Drawing.Point(167, 27);
-            this.textBoxIDBarang.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxIDBarang.Location = new System.Drawing.Point(125, 15);
             this.textBoxIDBarang.Name = "textBoxIDBarang";
-            this.textBoxIDBarang.Size = new System.Drawing.Size(245, 22);
+            this.textBoxIDBarang.Size = new System.Drawing.Size(185, 20);
             this.textBoxIDBarang.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 23);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(17, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 27);
+            this.label2.Size = new System.Drawing.Size(35, 22);
             this.label2.TabIndex = 7;
-            this.label2.Text = "ID";
+            this.label2.Text = "ID :";
             // 
             // panel1
             // 
@@ -133,33 +125,33 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBoxIDBarang);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(13, 87);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(10, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 210);
+            this.panel1.Size = new System.Drawing.Size(332, 104);
             this.panel1.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Gainsboro;
             this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(13, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(10, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(460, 41);
+            this.label1.Size = new System.Drawing.Size(332, 33);
             this.label1.TabIndex = 11;
             this.label1.Text = "HAPUS PEGAWAI";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormUbahPegawai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 386);
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.ClientSize = new System.Drawing.Size(353, 199);
             this.Controls.Add(this.buttonKeluar);
             this.Controls.Add(this.buttonSimpan);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormUbahPegawai";
             this.Text = "FormUbahPegawai";
             this.panel1.ResumeLayout(false);

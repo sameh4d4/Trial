@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Trial
 {
-    public partial class FormUbahPegawai : Form
+    public partial class FormHapusPegawai : Form
     {
-        public FormUbahPegawai()
+        public FormHapusPegawai()
         {
             InitializeComponent();
-        }
-
-        private void buttonSimpan_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

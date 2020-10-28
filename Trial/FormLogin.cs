@@ -100,7 +100,6 @@ namespace Trial
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            //dah bert ku tinggal bentar
         }
 
         private void textBoxUid_KeyDown(object sender, KeyEventArgs e)
