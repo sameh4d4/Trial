@@ -158,8 +158,6 @@ namespace Trial
 
         private void buttonSimpan_Click(object sender, EventArgs e)
         {
-
-            //teeeessss
             try
             {
                 Transaksi notaJual = new Transaksi(textBoxNoNota.Text, dateTimePickerTglNota.Value, (double)HitungTotal(), 0.1, double.Parse(labelGrandTotal.Text));
