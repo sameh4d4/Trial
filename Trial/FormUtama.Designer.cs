@@ -34,8 +34,9 @@
             this.transaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.penjualanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.penjualanToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pegawaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,23 +50,24 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // masterToolStripMenuItem
             // 
             this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.barangToolStripMenuItem});
+            this.barangToolStripMenuItem,
+            this.pegawaiToolStripMenuItem});
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
-            this.masterToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.masterToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.masterToolStripMenuItem.Text = "Master";
             // 
             // barangToolStripMenuItem
             // 
             this.barangToolStripMenuItem.Name = "barangToolStripMenuItem";
-            this.barangToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.barangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.barangToolStripMenuItem.Text = "Barang";
             this.barangToolStripMenuItem.Click += new System.EventHandler(this.barangToolStripMenuItem_Click);
             // 
@@ -74,13 +76,13 @@
             this.transaksiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.penjualanToolStripMenuItem});
             this.transaksiToolStripMenuItem.Name = "transaksiToolStripMenuItem";
-            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.transaksiToolStripMenuItem.Text = "Transaksi";
             // 
             // penjualanToolStripMenuItem
             // 
             this.penjualanToolStripMenuItem.Name = "penjualanToolStripMenuItem";
-            this.penjualanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.penjualanToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
             this.penjualanToolStripMenuItem.Text = "Penjualan";
             this.penjualanToolStripMenuItem.Click += new System.EventHandler(this.penjualanToolStripMenuItem_Click);
             // 
@@ -89,30 +91,38 @@
             this.labaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.penjualanToolStripMenuItem1});
             this.labaToolStripMenuItem.Name = "labaToolStripMenuItem";
-            this.labaToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.labaToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.labaToolStripMenuItem.Text = "Laporan";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // penjualanToolStripMenuItem1
             // 
             this.penjualanToolStripMenuItem1.Name = "penjualanToolStripMenuItem1";
-            this.penjualanToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.penjualanToolStripMenuItem1.Size = new System.Drawing.Size(155, 26);
             this.penjualanToolStripMenuItem1.Text = "Penjualan";
             this.penjualanToolStripMenuItem1.Click += new System.EventHandler(this.penjualanToolStripMenuItem1_Click);
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // pegawaiToolStripMenuItem
+            // 
+            this.pegawaiToolStripMenuItem.Name = "pegawaiToolStripMenuItem";
+            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pegawaiToolStripMenuItem.Text = "Pegawai";
+            this.pegawaiToolStripMenuItem.Click += new System.EventHandler(this.pegawaiToolStripMenuItem_Click);
+            // 
             // FormUtama
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormUtama";
             this.Text = "FormUtama";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -133,5 +143,6 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         public System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem penjualanToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pegawaiToolStripMenuItem;
     }
 }

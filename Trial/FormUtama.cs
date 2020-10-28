@@ -86,5 +86,21 @@ namespace Trial
                 form.BringToFront();
             }
         }
+
+        private void pegawaiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            form = Application.OpenForms["FormDaftarPegawai"];
+            if (form == null)
+            {
+                FormDaftarPegawai formDaftarPegawai = new FormDaftarPegawai();
+                formDaftarPegawai.MdiParent = this;
+                formDaftarPegawai.Show();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
+        }
     }
 }

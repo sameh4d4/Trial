@@ -16,5 +16,10 @@ namespace Trial
         {
             InitializeComponent();
         }
+
+        private void buttonSimpan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
