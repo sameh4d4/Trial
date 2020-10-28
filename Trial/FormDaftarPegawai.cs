@@ -13,7 +13,6 @@ namespace Trial
 {
     public partial class FormDaftarPegawai : Form
     {
-        //tes2
         public FormDaftarPegawai()
         {
             InitializeComponent();
