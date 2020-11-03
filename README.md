@@ -1,2 +1,1 @@
-# HARAP UPDATE MYSQL.DATANYA KE YANG BARU, AKU UDAH UPLOAD YANG BARU
-## update db ya gaes
+#nothing to see here
