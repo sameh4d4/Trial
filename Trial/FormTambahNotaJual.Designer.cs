@@ -142,6 +142,7 @@
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(59, 20);
             this.textBoxId.TabIndex = 1;
+            this.textBoxId.TextChanged += new System.EventHandler(this.textBoxId_TextChanged);
             this.textBoxId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxId_KeyDown);
             // 
             // label2
@@ -305,6 +306,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(690, 190);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // textBoxJumlah
             // 

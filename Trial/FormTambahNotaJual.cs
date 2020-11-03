@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClassLibrary1;
+using MySqlX.XDevAPI.Relational;
 
 namespace Trial
 {
     public partial class FormTambahNotaJual : Form
     {
-
+        DataGridViewButtonColumn buttonColumnHapus;
         #region meth Custom
         void FormatDG()
         {
@@ -25,6 +26,12 @@ namespace Trial
             dataGridView1.Columns.Add("Jumlah", "Jumlah");
             dataGridView1.Columns.Add("Keterangan", "Keterangan");
             dataGridView1.Columns.Add("SubTotal", "SubTotal");
+            buttonColumnHapus = new DataGridViewButtonColumn();
+            buttonColumnHapus.HeaderText = "Action";
+            buttonColumnHapus.Text = "Hapus";
+            buttonColumnHapus.Name = "buttonHapusGrid";
+            buttonColumnHapus.UseColumnTextForButtonValue = true;
+            dataGridView1.Columns.Add(buttonColumnHapus);
 
             dataGridView1.Columns["SubTotal"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridView1.Columns["SubTotal"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -81,49 +88,64 @@ namespace Trial
 
         private void textBoxJumlah_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode.Equals(Keys.Enter))
+            try
             {
-                int stok = Barang.BacaData("idbarang", textBoxId.Text)[0].Stok;
-                if (stok > int.Parse(textBoxJumlah.Text))
+                if (e.KeyCode.Equals(Keys.Enter))
                 {
-                    bool cek = false;
-                    int index = 0;
-                    int subTotal = int.Parse(labelHarga.Text) * int.Parse(textBoxJumlah.Text);
-                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    int stok = Barang.BacaData("idbarang", textBoxId.Text)[0].Stok;
+                    if (stok > int.Parse(textBoxJumlah.Text))
                     {
-                        string asd = dataGridView1.Rows[i].Cells["IdBarang"].Value.ToString();
-                        if (textBoxId.Text == asd && dataGridView1.Rows[i].Cells["Keterangan"].Value.ToString() == textBoxKet.Text)
+                        bool cek = false;
+                        int index = 0;
+                        int subTotal = int.Parse(labelHarga.Text) * int.Parse(textBoxJumlah.Text);
+                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
                         {
-                            cek = true;
-                            index = i;
+                            string asd = dataGridView1.Rows[i].Cells["IdBarang"].Value.ToString();
+                            if (textBoxId.Text == asd && dataGridView1.Rows[i].Cells["Keterangan"].Value.ToString() == textBoxKet.Text)
+                            {
+                                cek = true;
+                                index = i;
+                            }
                         }
-                    }
-                    if (!cek)
-                    {
-                        dataGridView1.Rows.Add(textBoxId.Text, labelNamaBarang.Text, labelHarga.Text, textBoxJumlah.Text, textBoxKet.Text, subTotal);
+                        if (!cek)
+                        {
+                            dataGridView1.Rows.Add(textBoxId.Text, labelNamaBarang.Text, labelHarga.Text, textBoxJumlah.Text, textBoxKet.Text, subTotal);
+
+                            
+                        }
+                        else
+                        {
+                            int jumlah = int.Parse(textBoxJumlah.Text) + int.Parse(dataGridView1.Rows[index].Cells["Jumlah"].Value.ToString());
+                            subTotal += int.Parse(dataGridView1.Rows[index].Cells["SubTotal"].Value.ToString());
+                            dataGridView1.Rows[index].Cells["SubTotal"].Value = subTotal;
+                            dataGridView1.Rows[index].Cells["Jumlah"].Value = jumlah;
+
+                        }
+                        //labelGrandTotal.Text = HitungGrandTotal().ToString("#,###");
+                        textBoxKet.Text = "-";
+                        textBoxId.Text = "";
+                        labelNamaBarang.Text = "";
+                        labelHarga.Text = "";
+                        textBoxJumlah.Text = "";
+                        textBoxId.Focus();
                     }
                     else
                     {
-                        int jumlah = int.Parse(textBoxJumlah.Text) + int.Parse(dataGridView1.Rows[index].Cells["Jumlah"].Value.ToString());
-                        subTotal += int.Parse(dataGridView1.Rows[index].Cells["SubTotal"].Value.ToString());
-                        dataGridView1.Rows[index].Cells["SubTotal"].Value = subTotal;
-                        dataGridView1.Rows[index].Cells["Jumlah"].Value = jumlah;
+                        MessageBox.Show("Stok tidak mencukupi");
+                        textBoxJumlah.Clear();
+                        textBoxJumlah.Focus();
                     }
-                    //labelGrandTotal.Text = HitungGrandTotal().ToString("#,###");
-                    textBoxKet.Text = "-";
-                    textBoxId.Text = "";
-                    labelNamaBarang.Text = "";
-                    labelHarga.Text = "";
-                    textBoxJumlah.Text = "";
-                    textBoxId.Focus();
-                }
-                else
-                {
-                    MessageBox.Show("Stok tidak mencukupi");
-                    textBoxJumlah.Clear();
-                    textBoxJumlah.Focus();
                 }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonHapusGrid_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(dataGridView1.CurrentCell.RowIndex.ToString());
         }
 
         private void textBoxKet_KeyDown(object sender, KeyEventArgs e)
@@ -183,6 +205,33 @@ namespace Trial
             catch (Exception ex)
             {
                 MessageBox.Show("Input nota gagal, pesan kesalahan: " + ex.Message, "Kesalahan");
+            }
+        }
+
+        private void textBoxId_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxId.TextLength > 0)
+            {
+                List<Barang> li = Barang.BacaData("idbarang", int.Parse(textBoxId.Text).ToString());
+                if (li.Count > 0)
+                {
+                    labelNamaBarang.Text = li[0].NamaBarang;
+                    labelHarga.Text = li[0].Harga.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Item tidak ditemukan", "informasi");
+                    textBoxId.Clear();
+                    textBoxId.Focus();
+                }
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["buttonHapusGrid"].Index && e.RowIndex >= 0)
+            {
+                dataGridView1.Rows.RemoveAt(e.RowIndex);
             }
         }
     }
