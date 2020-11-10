@@ -17,7 +17,6 @@ namespace Trial
         {
             InitializeComponent();
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try

@@ -47,6 +47,7 @@ namespace Trial
     
         private void FormUtama_Load_1(object sender, EventArgs e)
         {
+            labelUser.Text = "root";
             WindowState = FormWindowState.Maximized;
             IsMdiContainer = true;
             FormLogin login = new FormLogin();
