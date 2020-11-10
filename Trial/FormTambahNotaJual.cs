@@ -131,7 +131,6 @@ namespace Trial
                     }
                     else
                     {
-                        //komen
                         MessageBox.Show("Stok tidak mencukupi");
                         textBoxJumlah.Clear();
                         textBoxJumlah.Focus();
