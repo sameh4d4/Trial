@@ -42,7 +42,7 @@ namespace Trial
                     }
                     if (passOK)
                     {
-                        MessageBox.Show("berhasil login", "information");
+                        MessageBox.Show("Login Berhasil", "Information");
                         FormUtama formUtama = (FormUtama)this.Owner;
                         formUtama.u = sss;
                         formUtama.Enabled = true;
