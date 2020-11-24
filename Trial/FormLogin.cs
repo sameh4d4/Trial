@@ -17,6 +17,7 @@ namespace Trial
         {
             InitializeComponent();
         }
+        bool show = false;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
@@ -116,6 +117,22 @@ namespace Trial
             {
                 btnLogin_Click(textBoxPwd, e);
             }
+        }
+
+        private void buttonShow_Click(object sender, EventArgs e)
+        {
+           
+            if(show == false)
+            {
+                show = true;
+                textBoxPwd.PasswordChar = '\0';
+            }
+            else
+            {
+                show = false;
+                textBoxPwd.PasswordChar = '☺';
+            }
+            
         }
     }
 }
