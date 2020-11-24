@@ -90,5 +90,10 @@ namespace Trial
             
             //tes
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            //test branch password
+        }
     }
 }
