@@ -85,7 +85,7 @@
             this.transaksiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.penjualanToolStripMenuItem});
             this.transaksiToolStripMenuItem.Name = "transaksiToolStripMenuItem";
-            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.transaksiToolStripMenuItem.Text = "Transaksi";
             // 
             // penjualanToolStripMenuItem
@@ -113,7 +113,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -166,6 +166,6 @@
         private System.Windows.Forms.ToolStripMenuItem penjualanToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pegawaiToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelUser;
+        public System.Windows.Forms.Label labelUser;
     }
 }

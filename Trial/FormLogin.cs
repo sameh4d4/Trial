@@ -45,6 +45,7 @@ namespace Trial
                         FormUtama formUtama = (FormUtama)this.Owner;
                         formUtama.u = sss;
                         formUtama.Enabled = true;
+                        formUtama.labelUser.Text = sss.Name;
                         this.Close();
                     }
                     else
