@@ -80,6 +80,7 @@ namespace Trial
                 FormLaporanPenjualan laporanPenjualan = new FormLaporanPenjualan();
                 laporanPenjualan.MdiParent = this;
                 laporanPenjualan.Show();
+                //comment
             }
             else
             {
