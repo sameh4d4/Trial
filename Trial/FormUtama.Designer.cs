@@ -53,7 +53,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(772, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,21 +62,22 @@
             this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.barangToolStripMenuItem,
             this.pegawaiToolStripMenuItem});
+            this.masterToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
-            this.masterToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.masterToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.masterToolStripMenuItem.Text = "Master";
             // 
             // barangToolStripMenuItem
             // 
             this.barangToolStripMenuItem.Name = "barangToolStripMenuItem";
-            this.barangToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.barangToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.barangToolStripMenuItem.Text = "Barang";
             this.barangToolStripMenuItem.Click += new System.EventHandler(this.barangToolStripMenuItem_Click);
             // 
             // pegawaiToolStripMenuItem
             // 
             this.pegawaiToolStripMenuItem.Name = "pegawaiToolStripMenuItem";
-            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.pegawaiToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.pegawaiToolStripMenuItem.Text = "Pegawai";
             this.pegawaiToolStripMenuItem.Click += new System.EventHandler(this.pegawaiToolStripMenuItem_Click);
             // 
@@ -84,14 +85,15 @@
             // 
             this.transaksiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.penjualanToolStripMenuItem});
+            this.transaksiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.transaksiToolStripMenuItem.Name = "transaksiToolStripMenuItem";
-            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.transaksiToolStripMenuItem.Text = "Transaksi";
             // 
             // penjualanToolStripMenuItem
             // 
             this.penjualanToolStripMenuItem.Name = "penjualanToolStripMenuItem";
-            this.penjualanToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.penjualanToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.penjualanToolStripMenuItem.Text = "Penjualan";
             this.penjualanToolStripMenuItem.Click += new System.EventHandler(this.penjualanToolStripMenuItem_Click);
             // 
@@ -99,39 +101,47 @@
             // 
             this.labaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.penjualanToolStripMenuItem1});
+            this.labaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.labaToolStripMenuItem.Name = "labaToolStripMenuItem";
-            this.labaToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.labaToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.labaToolStripMenuItem.Text = "Laporan";
             // 
             // penjualanToolStripMenuItem1
             // 
             this.penjualanToolStripMenuItem1.Name = "penjualanToolStripMenuItem1";
-            this.penjualanToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.penjualanToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.penjualanToolStripMenuItem1.Text = "Penjualan";
             this.penjualanToolStripMenuItem1.Click += new System.EventHandler(this.penjualanToolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Red;
+            this.exitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.exitToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.exitToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.exitToolStripMenuItem.Text = "Log Out";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(578, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(567, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(44, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "User:";
             // 
             // labelUser
             // 
             this.labelUser.AutoSize = true;
-            this.labelUser.Location = new System.Drawing.Point(629, 10);
+            this.labelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelUser.Location = new System.Drawing.Point(629, 5);
             this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(29, 13);
+            this.labelUser.Size = new System.Drawing.Size(40, 18);
             this.labelUser.TabIndex = 5;
             this.labelUser.Text = "User";
             // 
@@ -139,10 +149,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(772, 450);
             this.Controls.Add(this.labelUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.IsMdiContainer = true;
             this.Name = "FormUtama";
             this.Text = "FormUtama";
