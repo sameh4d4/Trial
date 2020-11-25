@@ -1,6 +1,6 @@
 ﻿namespace Trial
 {
-    partial class Form1
+    partial class FormTrial
     {
         /// <summary>
         /// Required designer variable.

@@ -12,10 +12,10 @@ namespace Trial
 {
     //testing
     //testing2
-    public partial class Form1 : Form
+    public partial class FormTrial : Form
     {
         List<int> iniList = new List<int>();
-        public Form1()
+        public FormTrial()
         {
             InitializeComponent();
             

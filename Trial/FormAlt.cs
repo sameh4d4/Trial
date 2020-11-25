@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Trial
 {
-    public partial class Form2 : Form
+    public partial class FormAlt : Form
     {
-        public Form2()
+        public FormAlt()
         {
             InitializeComponent();
         }

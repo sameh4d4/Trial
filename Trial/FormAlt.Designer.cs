@@ -1,6 +1,6 @@
 ﻿namespace Trial
 {
-    partial class Form2
+    partial class FormAlt
     {
         /// <summary>
         /// Required designer variable.
